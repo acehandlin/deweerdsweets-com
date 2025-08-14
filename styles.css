@@ -48,6 +48,19 @@ nav {
     gap: 1rem;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 .brand-text h1 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
