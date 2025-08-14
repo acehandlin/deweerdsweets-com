@@ -3,353 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeWeerd Sweets - Artisan Confections & Sweet Treats</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #ffeef8 0%, #ffe5f1 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #ff6b9d, #feca57);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            font-weight: normal;
-        }
-
-        .tagline {
-            text-align: center;
-            font-style: italic;
-            margin-top: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        nav {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav li {
-            margin: 0 1.5rem;
-        }
-
-        nav a {
-            color: #ff6b9d;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover {
-            color: #feca57;
-        }
-
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-            background: white;
-            margin: 2rem 0;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .hero h2 {
-            color: #ff6b9d;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .sweet-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
-        }
-
-        .sweet-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-        }
-
-        .sweet-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .sweet-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .sweet-card h3 {
-            color: #ff6b9d;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .about-section {
-            background: white;
-            padding: 3rem 2rem;
-            margin: 2rem 0;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .about-section h2 {
-            color: #ff6b9d;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem 2rem;
-            margin: 2rem 0;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .contact-form h2 {
-            color: #ff6b9d;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #555;
-            font-weight: bold;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #ffe5f1;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: #ff6b9d;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        button {
-            background: linear-gradient(135deg, #ff6b9d, #feca57);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-            display: block;
-            margin: 0 auto;
-        }
-
-        button:hover {
-            transform: scale(1.05);
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        .social-links {
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            margin: 0 1rem;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            nav li {
-                margin: 0.5rem;
-            }
-
-            .sweet-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>DeWeerd Sweets - Artisan Macarons & Sweet Treats</title>
+    <meta name="description" content="Handcrafted macarons and sweet treats by Daniella DeWeerd. Gluten-free options available. Serving Allendale and West Olive, Michigan.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🍬 DeWeerd Sweets 🍭</h1>
-            <p class="tagline">Handcrafted with Love, Sweetened with Joy</p>
-        </div>
-    </header>
-
     <nav>
         <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Our Sweets</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#order">Order</a></li>
-            </ul>
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="DeWeerd Sweets Logo" class="logo">
+                    <div class="brand-text">
+                        <h1>DeWeerd Sweets</h1>
+                        <p class="tagline">Artisan Confections & Sweet Treats</p>
+                    </div>
+                </div>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#flavors" class="nav-link">Flavors</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="container">
-        <section id="home" class="hero">
-            <h2>Welcome to DeWeerd Sweets</h2>
-            <p>Where every bite is a celebration of flavor and craftsmanship. Our artisan confections are made with the finest ingredients and a passion for creating moments of pure sweetness.</p>
-        </section>
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
-        <section id="products">
-            <div class="sweet-grid">
-                <div class="sweet-card">
-                    <div class="sweet-icon">🍫</div>
-                    <h3>Artisan Chocolates</h3>
-                    <p>Hand-dipped chocolates made with premium Belgian cocoa, featuring unique flavor combinations and seasonal selections.</p>
-                </div>
-                <div class="sweet-card">
-                    <div class="sweet-icon">🧁</div>
-                    <h3>Gourmet Cupcakes</h3>
-                    <p>Freshly baked daily with creative frosting designs and flavors that change with the seasons.</p>
-                </div>
-                <div class="sweet-card">
-                    <div class="sweet-icon">🍪</div>
-                    <h3>Specialty Cookies</h3>
-                    <p>From classic chocolate chip to exotic flavor combinations, our cookies are baked to perfection.</p>
-                </div>
-                <div class="sweet-card">
-                    <div class="sweet-icon">🍰</div>
-                    <h3>Custom Cakes</h3>
-                    <p>Beautiful custom cakes for any occasion, designed to your specifications and dietary needs.</p>
-                </div>
-                <div class="sweet-card">
-                    <div class="sweet-icon">🍮</div>
-                    <h3>Seasonal Treats</h3>
-                    <p>Special holiday and seasonal confections that celebrate the flavors of each time of year.</p>
-                </div>
-                <div class="sweet-card">
-                    <div class="sweet-icon">🎁</div>
-                    <h3>Gift Boxes</h3>
-                    <p>Beautifully packaged gift sets perfect for any occasion, customizable to your preferences.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Handcrafted with Love</h2>
+                <p>Every macaron is a work of art, carefully crafted with premium ingredients and passion. Experience the perfect balance of delicate texture and exquisite flavor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="image-showcase">
+                <img src="images/macarons.jpg" alt="Beautiful array of colorful macarons" class="showcase-image">
+                <div class="showcase-content">
+                    <h3>Our Signature Macarons</h3>
+                    <p>Each macaron is a delicate symphony of flavors, featuring crisp shells and luscious fillings that melt in your mouth. Our recipes have been perfected through countless hours of dedication to the craft.</p>
+                    <p>From classic vanilla to seasonal specialties, every bite tells a story of quality ingredients and artisanal technique.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="about-section">
-            <h2>Our Sweet Story</h2>
-            <p>DeWeerd Sweets began as a family tradition of sharing homemade treats with friends and neighbors. What started in a small kitchen has grown into a beloved local confectionery, but our commitment to quality and personal touch remains the same.</p>
-            <br>
-            <p>Every sweet we create is made with carefully selected ingredients, time-honored techniques, and most importantly, love. We believe that life's sweetest moments deserve the perfect treat to match, and we're honored to be part of your celebrations.</p>
-            <br>
-            <p>From our family to yours, we invite you to experience the magic of DeWeerd Sweets.</p>
-        </section>
+    <section id="flavors" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Macaron Flavors</h2>
+                <p>Gluten-free* options crafted with premium ingredients</p>
+            </div>
+            
+            <div class="flavors-grid">
+                <div class="flavor-card">
+                    <div class="flavor-image flavor-vanilla"></div>
+                    <div class="flavor-content">
+                        <div class="flavor-name">Vanilla</div>
+                        <div class="flavor-description">Classic and elegant with real Madagascar vanilla bean, creating a timeless flavor that never goes out of style.</div>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image flavor-chocolate"></div>
+                    <div class="flavor-content">
+                        <div class="flavor-name">Chocolate</div>
+                        <div class="flavor-description">Rich, decadent chocolate made with premium cocoa for an indulgent experience in every bite.</div>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image flavor-cookies"></div>
+                    <div class="flavor-content">
+                        <div class="flavor-name">Cookies and Cream</div>
+                        <div class="flavor-description">The beloved cookie flavor transformed into macaron perfection with crushed cookie pieces and cream filling.</div>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image flavor-cotton-candy"></div>
+                    <div class="flavor-content">
+                        <div class="flavor-name">Cotton Candy</div>
+                        <div class="flavor-description">Sweet carnival memories captured in a delicate shell, bringing childhood joy to sophisticated palates.</div>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image flavor-pumpkin"></div>
+                    <div class="flavor-content">
+                        <div class="flavor-name">Pumpkin Spice</div>
+                        <div class="flavor-description">Seasonal favorite featuring warm spices and pumpkin flavor, perfect for autumn celebrations.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="note">
+                <p><strong>*Trace amounts of gluten may be present</strong></p>
+                <p>Dairy-free options are a work in progress for select flavors</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact" class="contact-form">
-            <h2>Get in Touch</h2>
-            <form name="contact" method="POST" data-netlify="true">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+    <section class="section">
+        <div class="container">
+            <div class="image-showcase">
+                <div class="showcase-content">
+                    <h3>Beyond Macarons</h3>
+                    <p>While macarons are our specialty, we also create other delightful treats to satisfy your sweet cravings.</p>
+                    <p>Our homemade pies feature fresh, seasonal ingredients and are baked to golden perfection with love and attention to detail.</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                <img src="images/pie.jpg" alt="Homemade apple blueberry pie" class="showcase-image">
+            </div>
+            
+            <div class="note">
+                <p><strong>Apple Blueberry Pie</strong> - Homemade pie featuring fresh apples and blueberries in a flaky, buttery crust ($45.00)</p>
+                <p>Other desserts available upon request - please contact us to discuss your custom treat needs!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pricing</h2>
+                <p>Affordable luxury for every occasion</p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="pricing-grid">
+                    <div class="price-item">
+                        <span class="price-description">1 Macaron</span>
+                        <span class="price-amount">$1.50</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-description">6 Macarons</span>
+                        <span class="price-amount">$8.50</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-description">12 Macarons</span>
+                        <span class="price-amount">$16.00</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-description">24 Macarons</span>
+                        <span class="price-amount">$30.00</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-description">25-49 Macarons</span>
+                        <span class="price-amount">$1.20 each</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-description">50+ Macarons</span>
+                        <span class="price-amount">Contact for pricing</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-description">Apple Blueberry Pie</span>
+                        <span class="price-amount">$45.00</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
+                
+                <div class="note">
+                    <p><strong>Payment methods accepted:</strong> Cash, PayPal, Venmo, Credit Card</p>
+                    <p><strong>Delivery options:</strong> Hand-off within 30 miles of Allendale, Michigan, or pickup near West Olive, Michigan</p>
                 </div>
-                <div class="form-group">
-                    <label for="inquiry">Type of Inquiry</label>
-                    <select id="inquiry" name="inquiry">
-                        <option value="general">General Question</option>
-                        <option value="order">Place an Order</option>
-                        <option value="custom">Custom Order Request</option>
-                        <option value="catering">Catering/Event Inquiry</option>
-                        <option value="wholesale">Wholesale Inquiry</option>
-                    </select>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Daniella</h2>
+                <p>The passionate baker behind DeWeerd Sweets</p>
+            </div>
+            
+            <div class="about-content">
+                <img src="images/daniella.jpg" alt="Daniella DeWeerd, owner and baker" class="daniella-image">
+                <div class="about-text">
+                    <p>Hello! My name is Daniella DeWeerd and I am the owner and sole baker of DeWeerd Sweets. Whether it was helping my mom put cupcake liners in the tin for some of her delicious blueberry muffins, or licking the leftover cake frosting out of the piping bag my grandma used to decorate cakes, I've always enjoyed helping make sweet foods in the kitchen.</p>
+                    
+                    <p>More recently, I've grown to love making my own recipes for cheesecakes and macarons especially. After bringing macarons to my sister's graduation party, I realized just how much people love them, but don't have the time and/or the patience to make them.</p>
+                    
+                    <p>That's where the idea to start this business came from. With it, I hope to be able to bring the joy of macarons and other baked desserts to more people!</p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Tell us about your sweet dreams..."></textarea>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Ready to place an order or have questions? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <h3>Email</h3>
+                    <a href="mailto:contact@deweerdsweets.com">contact@deweerdsweets.com</a>
                 </div>
-                <button type="submit">Send Sweet Message</button>
-            </form>
-        </section>
-    </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+16166136616">(616) 613-6616</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Service Area</h3>
+                    <p>Within 30 miles of Allendale, Michigan<br>
+                    Pickup available near West Olive, Michigan</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 DeWeerd Sweets. All rights reserved.</p>
-            <p>Made with 💗 and sugar</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Email">✉️</a>
+            <div class="footer-content">
+                <p>&copy; 2025 DeWeerd Sweets. All rights reserved.</p>
+                <p>Handcrafted with love in West Olive, Michigan</p>
+                <p>Made with the finest ingredients and attention to detail</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Hamburger Menu Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
+            const navOverlay = document.getElementById('navOverlay');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Toggle menu function
+            function toggleMenu() {
+                hamburgerMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                
+                // Prevent body scroll when menu is open
+                if (navMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Close menu function
+            function closeMenu() {
+                hamburgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Event listeners
+            hamburgerMenu.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', closeMenu);
+
+            // Close menu when clicking navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close menu with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
