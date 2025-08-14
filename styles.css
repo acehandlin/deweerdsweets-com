@@ -88,9 +88,10 @@ nav {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 10px;
     position: relative;
-    z-index: 1001;
+    z-index: 10000;
+    flex-shrink: 0;
 }
 
 .hamburger-line {
@@ -508,16 +509,26 @@ footer {
     /* Navigation improvements */
     nav {
         padding: 1rem 0;
+        z-index:2;
     }
     
     .nav-content {
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+        min-height: 60px;
     }
 
     .nav-brand {
         flex-direction: row;
         gap: 1rem;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .logo-link {
+        max-width: calc(100vw - 80px);
+        overflow: hidden;
     }
 
     .logo {
@@ -535,6 +546,9 @@ footer {
     /* Show hamburger menu */
     .hamburger-menu {
         display: flex;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 12px;
     }
 
     /* Hide navigation menu by default on mobile */
@@ -551,8 +565,9 @@ footer {
         align-items: center;
         padding-top: 5rem;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        z-index: 1000;
+        z-index: 2;
         transition: right 0.3s ease;
+        transform: translateZ(0);
     }
 
     /* Show navigation menu when active */
@@ -586,7 +601,7 @@ footer {
         width: 100%;
         height: 100%;
         background-color: rgba(0,0,0,0.5);
-        z-index: 999;
+        z-index: 1;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
